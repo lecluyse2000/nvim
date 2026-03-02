@@ -44,6 +44,6 @@ opt.splitright = true
 opt.splitbelow = true
 opt.iskeyword:append("-")
 opt.mouse:append("a")
-opt.clipboard:append("unnamedplus")
+opt.clipboard = 'unnamedplus'
 opt.modifiable = true
 opt.guicursor = ""

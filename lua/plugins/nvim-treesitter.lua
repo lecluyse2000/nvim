@@ -1,10 +1,6 @@
 local config = function()
-   require("nvim-treesitter.configs").setup({
-      build = ":TSUpdate",
+   require("nvim-treesitter").setup({
       indent = {
-         enable = true,
-      },
-      autotag = {
          enable = true,
       },
       ensure_installed = {
@@ -41,7 +37,12 @@ local config = function()
 end
 
 return {
-   "nvim-treesitter/nvim-treesitter",
-   lazy = false,
-   config = config,
+    "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+        "nvim-treesitter/nvim-treesitter-textobjects",
+    },
+    branch = "master",
+    build = ":TSUpdate",
+    lazy = false,
+    config = config,
 }
