@@ -59,7 +59,7 @@ return {
       require('mason-lspconfig').setup({
          ensure_installed = {
             "lua_ls",
-            "cmake",
+            "neocmake",
             "autotools_ls",
             "clangd",
             "marksman",
